@@ -1,10 +1,37 @@
 ---
 
 - name: install php
-  yum: name={{item}} state=installed
+  yum: name={{item}} state={{php_pkg_state}}
+  with_items:
+    - php
+  when: php_pkg_php
+
+- name: install php cli
+  yum: name={{item}} state={{php_pkg_state}}
+  with_items:
+    - php-cli
+  when: php_pkg_cli
+
+- name: install php gd
+  yum: name={{item}} state={{php_pkg_state}}
+  with_items:
+    - php-gd
+  when: php_pkg_gd
+
+- name: install php mcrypt
+  yum: name={{item}} state={{php_pkg_state}}
+  with_items:
+    - php-mcrypt
+  when: php_pkg_mcrypt
+
+- name: install php ldap
+  yum: name={{item}} state={{php_pkg_state}}
+  with_items:
+    - php-ldap
+  when: php_pkg_ldap
+
+- name: install php mysql
+  yum: name={{item}} state={{php_pkg_state}}
   with_items:
     - php-mysql
-    - php-ldap
-    - php-cli
-    - php
-
+  when: php_pkg_mysql

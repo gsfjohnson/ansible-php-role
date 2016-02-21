@@ -3,9 +3,9 @@
 php_pkg_state: installed
 
 php_pkg_php: true
-php_pkg_cli: true
-php_pkg_mcrypt: true
-php_pkg_gd: true
-php_pkg_ldap: true
-php_pkg_mysql: true
+php_pkg_cli: false
+php_pkg_mcrypt: false
+php_pkg_gd: false
+php_pkg_ldap: false
+php_pkg_mysql: false
 
